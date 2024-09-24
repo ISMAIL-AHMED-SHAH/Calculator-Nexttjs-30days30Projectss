@@ -26,11 +26,6 @@ export default function CalculatorComponent() {
     }
   };
 
-  // Function to switch between num1 and num2 input
-  const toggleInput = (): void => {
-    setActiveInput((prev) => (prev === "num1" ? "num2" : "num1"));
-  };
-
   // Function to perform addition and set the result
   const add = (): void => {
     setResult((parseFloat(num1) + parseFloat(num2)).toString());
@@ -105,7 +100,7 @@ export default function CalculatorComponent() {
           </div>
           {/* Number pad */}
           <div className="grid grid-cols-3 gap-4">
-            {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."].map((number) => (
+            {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".","Ismail"].map((number) => (
               <Button
                 key={number}
                 variant="outline"
@@ -169,6 +164,9 @@ export default function CalculatorComponent() {
           </Button>
         </CardContent>
       </Card>
+      <div>
+        <h6>Created By Ismail Ahmed Shah</h6>
+      </div>
     </div>
   );
 }
